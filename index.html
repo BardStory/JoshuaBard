@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joshua Bard</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/contact.css" />
   
 </head>
 <!-- Header choices-->
@@ -14,8 +15,8 @@
     
     <nav>
       <ul>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact Me</a></li>
@@ -45,7 +46,23 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-list">
-      <div class="project">Project 1</div>
+      <div class="project">
+        <h3>Headless JEFF-3</h3>
+        <img 
+          src="https://cdn.cloudflare.steamstatic.com/steam/apps/1721820/header.jpg" 
+          alt="Headless JEFF-3 Banner" 
+          style="width:100%; border-radius: 8px; margin-bottom: 1rem;" 
+        />
+        <p>
+          <strong>Headless JEFF-3</strong> is a puzzle game I got to work on while doing a coop at Insanity Corr Studios. 
+          I worked on gameplay logic such as jump pads and a electricity system as well as optimizing foliage and lighting.
+          This game was developer in Unreal Engine in both C++ and Blueprints.
+        </p>
+        <a href="https://store.steampowered.com/app/1721820/Headless_JEFF3/" target="_blank">
+          View on Steam
+        </a>
+      </div>
+      
       <div class="project">Project 2</div>
       <div class="project">Project 3</div>
       <div class="project">Project 4</div>
@@ -59,13 +76,32 @@
     <iframe src="resume/Joshua Bard Resume 2025.pdf" width="100%" height="500px" title="Resume"></iframe>
   </section>
 
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-box">
+      <form action="https://formspree.io/f/xblgpgdl" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+  
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+  
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+  
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  
   
 
   <footer>
     <p>&copy; 2025 Joshua Bard</p>
   </footer>
 
-  <script src="js/volleyball.js"></script>
+  <!-- <script src="js/volleyball.js"></script> -->
   <script src="js/theme-toggle.js"></script>
   
 </body>
