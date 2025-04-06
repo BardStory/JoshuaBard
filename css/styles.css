@@ -157,3 +157,24 @@ body.dark-mode #sectionMenu {
   background-color: #66ccff;
   color: black;
 }
+
+@media (max-width: 600px) {
+  #sectionMenu {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    width: 100%;
+  }
+
+  #menu-container {
+    padding: 0.5rem;
+    max-width: 120px;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+    padding-left: 1rem;
+    text-align: left;
+  }
+}
