@@ -46,10 +46,14 @@ body.dark-mode nav a {
 
 /* Sections */
 section {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
 }
+
+body.dark-mode section {
+  border-color: #333;
+}
+
 
 /* Projects */
 .project-list {
