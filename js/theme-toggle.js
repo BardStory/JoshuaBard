@@ -1,21 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const toggleButton = document.getElementById('darkModeToggle');
+  const sectionMenu = document.getElementById('sectionMenu');
+  let previousSection = "#top"; // default value
 
-  // Apply saved theme (if any), otherwise assume dark mode default
+  // Load saved theme
   const savedTheme = localStorage.getItem('theme');
-
   if (savedTheme === 'light') {
     document.body.classList.remove('dark-mode');
-    toggleButton.textContent = 'Dark Mode';
   } else {
-    document.body.classList.add('dark-mode'); // Keep or set dark mode
-    toggleButton.textContent = 'Light Mode';
+    document.body.classList.add('dark-mode');
   }
 
-  // Toggle theme on button click
-  toggleButton.addEventListener('click', () => {
-    const isDark = document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    toggleButton.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+  // Handle menu change
+  sectionMenu.addEventListener('change', function () {
+    const value = this.value;
+
+    if (value === "toggle-theme") {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+      // 👇 Reset dropdown to previous value (visually)
+      this.value = previousSection;
+    } else if (value) {
+      // Save new valid section as previous
+      previousSection = value;
+      window.location.hash = value;
+    }
   });
 });

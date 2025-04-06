@@ -10,7 +10,7 @@
   
 </head>
 <!-- Header choices-->
-<body>
+<body class="dark-mode">
   <header>
     <h1>Joshua Bard</h1>
     
@@ -22,15 +22,24 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-    </nav>
-
-    <body class="dark-mode">
-
+    </nav>   
+    </div>
   </header>
 
+  <div id="menu-container">
+    <select id="sectionMenu">
+      <option value="#top">Navigate to...</option>
+      <option value="#about">About Me</option>
+      <option value="#projects">Projects</option>
+      <option value="#skills">Skills</option>
+      <option value="#resume">Resume</option>
+      <option value="#contact">Contact</option>
+      <option disabled>──────────</option>
+      <option value="toggle-theme">Toggle Light/Dark Mode</option>
+    </select>
+  </div>
  
   <section id="about">
-    <button id="darkModeToggle">Toggle Light Mode</button>
     <h2>About Me</h2>
     <p>
       Hello! I’m Joshua Bard, a video game developer and programmer currently based on beautiful Vancouver Island, Canada. 
