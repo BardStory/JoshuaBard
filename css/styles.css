@@ -8,6 +8,10 @@ body {
   color: #333;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Dark Mode Overrides */
 body.dark-mode {
   background-color: #121212;
@@ -22,19 +26,16 @@ header {
   text-align: center;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    text-align: left;
-    padding-left: 1rem;
-    font-size: 1.4rem;
-  }
-}
-
 body.dark-mode header {
   background-color: #1f1f1f;
 }
 
-/* Navigation */
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Navigation (if used) */
 nav ul {
   list-style: none;
   padding: 0;
@@ -62,7 +63,6 @@ body.dark-mode section {
   border-color: #333;
 }
 
-
 /* Projects */
 .project-list {
   display: grid;
@@ -74,13 +74,13 @@ body.dark-mode section {
   background-color: white;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 body.dark-mode .project {
   background-color: #1e1e1e;
-  box-shadow: 0 0 5px rgba(255,255,255,0.05);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
 }
 
 /* Footer */
@@ -104,39 +104,7 @@ body.dark-mode a {
   color: #66ccff;
 }
 
-/* Dark Mode Toggle Button */
-#darkModeToggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
-}
-
-#darkModeToggle:hover {
-  background-color: #005fa3;
-}
-
-body.dark-mode #darkModeToggle {
-  background-color: #66ccff;
-  color: black;
-}
-
-body.dark-mode #darkModeToggle:hover {
-  background-color: #4bb3e7;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* Floating Menu Container */
 #menu-container {
   position: fixed;
   top: 1rem;
@@ -149,6 +117,7 @@ html {
   max-width: 150px;
 }
 
+/* Dropdown Menu */
 #sectionMenu {
   width: 100%;
   padding: 0.5rem;
@@ -166,6 +135,12 @@ body.dark-mode #sectionMenu {
   color: black;
 }
 
+/* Dark Mode Toggle Button (legacy or hidden) */
+#darkModeToggle {
+  display: none; /* Hide if you're using the dropdown option instead */
+}
+
+/* Responsive Mobile Styles */
 @media (max-width: 600px) {
   #sectionMenu {
     font-size: 0.8rem;
