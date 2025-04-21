@@ -128,11 +128,16 @@ body.dark-mode a {
   cursor: pointer;
   background-color: #0077cc;
   color: white;
+  transition: all 0.3s ease;
 }
 
 body.dark-mode #sectionMenu {
   background-color: #66ccff;
   color: black;
+}
+
+#sectionMenu:hover {
+  transform: scale(1.02);
 }
 
 /* Dark Mode Toggle Button (legacy or hidden) */
