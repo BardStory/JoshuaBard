@@ -1,0 +1,31 @@
+#blog {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .blog-post {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark-mode .blog-post {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.05);
+  }
+  
+  .blog-post h3 {
+    margin-top: 0;
+    color: #0077cc;
+  }
+  
+  .blog-post .date {
+    font-size: 0.9rem;
+    color: gray;
+    margin-bottom: 1rem;
+  }
+  
